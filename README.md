@@ -1,4 +1,4 @@
-# Astro & Tailwind CSS Starter Kit
+# Being and Bytes (my blog)
 
 ## 🔥 Features
 
