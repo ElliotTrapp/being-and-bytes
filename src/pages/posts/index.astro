@@ -5,11 +5,12 @@ import Section from '@/components/Section.astro';
 import Card from '@/components/Card.astro';
 import Heading from '@/components/Heading.astro';
 import { sortPostsByDate } from '@/utils/data.util';
+import { MDXInstance } from 'astro';
 
 const { title } = AppConfig;
 const { description } = AppConfig;
 
-const allPosts = await Astro.glob('./*.md');
+const allPosts = (await Astro.glob('./*.{mdx,md}')) as MDXInstance<any>[];
 allPosts.sort(sortPostsByDate);
 ---
 
